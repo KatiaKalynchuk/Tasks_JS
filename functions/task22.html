@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task22</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function that accepts two arguments, a string and a letter and the function will
+//    count the number of occurrences of the specified letter within the string.
+
+    function occurrences(str, letter) {
+        let res = 0;
+        for (let i = 0; i < str.length; i++){
+            if (str.charAt(i) === letter){
+                res++;
+            };
+        };
+        return res;
+    };
+    console.log(occurrences('sssdfffgdg','f'));
+</script>
+</body>
+</html>
