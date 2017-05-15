@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task11</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function which will take an array of numbers
+//    stored and find the second lowest and second greatest numbers, respectively.
+
+    function getNumber(arr) {
+
+        let secondLowest = arr.sort(function(a, b) {return a - b});
+        return secondLowest[1] +',' + secondLowest[arr.length-2];
+    };
+console.log(getNumber([1,2,3,4,5]));
+console.log(getNumber([3,1,7,20,11]));
+</script>
+</body>
+</html>
