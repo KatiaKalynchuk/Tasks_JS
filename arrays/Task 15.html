@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 15</title>
+</head>
+<body>
+<script>
+//    We have the following arrays :
+//    color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+//    o = ["th","st","nd","rd"].
+
+//    Write a JavaScript program to display the colors in the following way :
+//    "1st choice is Blue ."
+//    "2nd choice is Green."
+//    "3rd choice is Red."
+
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+let endings = ["th","st","nd","rd"];
+let count = 1;
+
+for (let i = 0; i < color.length; i++){
+    if (i < 3){
+        console.log(count + endings[i+1] + " choice is " + color[i]);
+        } else {
+        console.log(count + endings[0] + " choice is " + color[i]);
+    };
+    count++;
+};
+
+</script>
+</body>
+</html>
