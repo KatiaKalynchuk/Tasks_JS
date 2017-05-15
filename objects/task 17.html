@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 17</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to check if an object contains given property.
+
+let book = {
+    author: 'Bill Gates',
+    title: 'The Road Ahead',
+    libraryID: 1254
+};
+
+function isProp(obj, prop) {
+    if (prop in obj){
+        return true
+    } else {
+        return false
+    }
+};
+console.log(isProp(book, 'name'));
+console.log(isProp(book, 'author'));
+
+</script>
+</body>
+</html>
