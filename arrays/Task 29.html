@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 29</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to fill an array with values (numeric, string
+//    with one character) on supplied bounds.
+
+function getStrRange(start, end, step) {
+    let result = [];
+    if (typeof start === 'string') {
+        let startNum = start.charCodeAt(0);
+        let endNum = end.charCodeAt(0);
+
+        if (startNum < endNum) {
+            for (let i = startNum; i <= endNum; i += step) {
+                result.push(String.fromCharCode(i));
+            }
+        } else {
+            for (let i = startNum; i >= endNum; i -= step) {
+                result.push(String.fromCharCode(i));
+            }
+        }
+    } else if (typeof start === 'number') {
+        if (end > start) {
+            for (let i = start; i <= end; i += step) {
+                result.push(i);
+            }
+        } else {
+            for (let i = start; i >= end; i -= step) {
+                result.push(i);
+            }
+        }
+    }
+    return result;
+}
+
+    console.log(getStrRange('a', "z", 2));
+    console.log(getStrRange("Z", "A", 2));
+    console.log(getStrRange(0, -5, 1));
+    console.log(getStrRange(0, 24, 5));
+    console.log(getStrRange(20, 5, 5));
+</script>
+</body>
+</html>
