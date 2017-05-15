@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 11</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to find the sum of squares of a numeric vector
+
+    let array = [0,1,2,3,4,5];
+    let sum = 0;
+    function getSquares(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let pow = Math.pow(arr[i],2);
+            sum += pow;
+        };
+        return sum;
+    };
+    console.log(getSquares(array));
+
+</script>
+</body>
+</html>
