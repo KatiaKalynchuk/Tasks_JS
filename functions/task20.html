@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task20</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function that generates a string id (specified length) of random characters.
+    
+    function getStging(n) {
+        let arrStr = [];
+        let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        for (let i = 0; i < n; i++){
+            let char = str.charAt(Math.random()*str.length);
+            arrStr.push(char);
+        };
+        return arrStr.join('');
+    };
+    console.log(getStging(4));
+
+</script>
+</body>
+</html>
