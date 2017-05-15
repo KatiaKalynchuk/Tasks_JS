@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 16</title>
+</head>
+<body>
+<script>
+//    Find the leap years in a given range of years.
+
+    let years = [];
+    function getLeapYears(first,last) {
+        for (let i = first; i <= last; i++){
+            if ((i % 4 === 0 && i % 100 !== 0) || (i % 100 === 0 && i % 400 === 0 )){
+                years.push(i);
+            };
+        };
+        return years;
+    };
+
+    console.log(getLeapYears(2000, 2019));
+
+</script>
+</body>
+</html>
