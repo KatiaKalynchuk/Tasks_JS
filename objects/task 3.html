@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 3</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to get the length of an JavaScript object.
+
+let student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+
+function getLenght(obj){
+    let count=0;
+    for(let key in obj) {
+        count++;
+    };
+    return count;
+};
+
+console.log(getLenght(student));
+
+</script>
+</body>
+</html>
