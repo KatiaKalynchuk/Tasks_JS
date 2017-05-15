@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 8</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to create a Clock.
+
+function Clock() {
+    this.date = new Date();
+    this.hours = this.date.getHours();
+    this.minutes = this.date.getMinutes();
+    this.seconds = this.date.getSeconds();
+    if(this.minutes < 10) {
+        this.minutes = '0' + this.minutes;
+    }
+    if(this.seconds < 10) {
+        this.seconds = '0' + this.seconds;
+    }
+    console.log(this.hours + ':' + this.minutes + ':' + this.seconds);
+};
+setInterval(Clock, 1000);
+
+</script>
+</body>
+</html>
