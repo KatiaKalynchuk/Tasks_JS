@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 27</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to retrieve the value of a given property from all elements in an array.
+
+    let array = [NaN, 0, 15, false, -22, '',undefined, 47, null];
+    let property = 'boolean';
+    let property1 = 'string';
+
+    function union(arr,property){
+        let value = [];
+        for (let i = 0;i < arr.length; i++) {
+            if ((typeof arr[i]) == property){
+                value.push(arr[i]);
+            };
+        };
+        return value;
+    };
+    console.log(union(array,property1));
+    console.log(union(array,property));
+</script>
+</body>
+</html>
