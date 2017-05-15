@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 17</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to shuffle an array.
+
+    function shuffle(arr) {
+        let shuffled = arr.sort(function (a,b){
+            return Math.floor(Math.random() * arr.length)
+        });
+        return shuffled;
+    };
+    console.log(shuffle([1, 2, 3, 4, 5, 7, 8, 9]));
+    console.log(shuffle(['e','f','r','g']));
+</script>
+</body>
+</html>
