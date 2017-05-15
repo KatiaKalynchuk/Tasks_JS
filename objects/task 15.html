@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 15</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to convert an object into a list of `[key, value]` pairs.
+
+let book = {
+    author: 'Bill Gates',
+    title: 'The Road Ahead',
+    libraryID: 1254
+};
+function getProp(obj) {
+    let keys = [];
+    for (let key in obj){
+        keys.push([key, obj[key]])
+    };
+    return keys;
+};
+
+book.isNew = true;
+book.price = 100;
+
+console.log(getProp(book));
+</script>
+</body>
+</html>
