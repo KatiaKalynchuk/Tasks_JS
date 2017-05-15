@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_6</title>
+</head>
+<body>
+	<script>
+	function fibonacci(n) {
+		if (n <= 1) {
+			return [0, 1];
+		} else {
+			let numberFib = fibonacci(n-1);
+			numberFib.push(numberFib[numberFib.length - 1] + numberFib[numberFib.length - 2]);
+			return numberFib;
+		};
+	};
+
+	console.log(fibonacci(10));
+	</script>
+</body>
+</html>
