@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 11</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to print all the methods in an JavaScript object.
+
+function getAllMethods(obj) {
+    return Object.getOwnPropertyNames(obj).filter(function(prop) {
+        return typeof obj[prop] == 'function';
+    });
+};
+console.log(getAllMethods(Array));
+console.log(getAllMethods(String));
+console.log(getAllMethods(Math));
+
+</script>
+</body>
+</html>
