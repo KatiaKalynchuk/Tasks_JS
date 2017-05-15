@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task6</title>
+</head>
+<body>
+<script>
+    function findLongestWord(str) {
+        var sorted = function(a, b) {
+            return b.length - a.length;
+        };
+        var longestWord = str.split(' ').sort(sorted);
+        return longestWord[0];
+    }
+    alert(findLongestWord("ggg hhhhhhh jj"));
+</script>
+</body>
+</html>
