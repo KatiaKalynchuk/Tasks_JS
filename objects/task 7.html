@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 8</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program which returns a subset of a string.
+
+String.prototype.getSubset = function() {
+    let subset = [];
+    for (let i = 0; i < this.length; i++) {
+        for (let j = i + 1; j < this.length+1; j++) {
+            subset.push(this.slice(j,i));
+        };
+    };
+    return subset;
+};
+
+console.log('dog'.getSubset());
+</script>
+</body>
+</html>
