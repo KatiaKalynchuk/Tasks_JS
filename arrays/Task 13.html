@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 13</title>
+</head>
+<body>
+<!--Write a JavaScript program to add items in an blank array and display the items.-->
+
+<input type="text" id="text">
+<input type="button" id="addBtn" value="Add" onclick="addEl();">
+<input type="button" id="displayBtn" value="Display" onclick="display();">
+<div id="result"></div>
+
+<script>
+
+    let arr = [];
+    let n = 0;
+
+    function addEl() {
+        let el = document.getElementById('text').value;
+        arr[n] = el;
+        n++;
+    };
+    function display() {
+        let el = '';
+        for (let i = 0; i < arr.length; i++){
+            el += 'Element ' + i + ' = ' + arr[i] + '<br/>';
+        };
+        document.getElementById('result').innerHTML = el;
+    };
+
+</script>
+</body>
+</html>
