@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task23</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to find the first not repeated character.
+
+    function firstNonRepeatedChar(str) {
+        let chars = str.split('');
+        for (let i = 0; i < str.length; i++) {
+            function getChar(j) {
+                return j == str.charAt(i);
+            };
+            if (chars.filter(getChar).length == 1) {
+                return str.charAt(i);
+            };
+        };
+    };
+
+console.log(firstNonRepeatedChar("the quick brown fox jumps over the lazy dog"));
+
+</script>
+</body>
+</html>
