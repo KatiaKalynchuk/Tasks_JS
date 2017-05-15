@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to get the first element of an array.Passing
+//    a parameter 'n' will return the first 'n' elements of the array.
+
+    function getFirstEl(arr,n) {
+        if (n){
+            return arr.slice(0,n);
+        } else {
+            return arr[0];
+        };
+    };
+
+console.log(getFirstEl([7, 9, 0, -2]));
+console.log(getFirstEl([],3));
+console.log(getFirstEl([7, 9, 0, -2],3));
+console.log(getFirstEl([7, 9, 0, -2],6));
+console.log(getFirstEl([7, 9, 0, -2],-3));
+
+</script>
+</body>
+</html>
