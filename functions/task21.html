@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task21</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to get all possible subset with a fixed length (for example 2)
+//    combinations in an array.
+
+    function getCombinations(arr, n) {
+
+        if (n > arr.length || n <= 0) {
+            return [];
+        };
+
+        if (n == arr.length) {
+            return [arr];
+        };
+
+        if (n == 1) {
+            let combs = [];
+            for (let i = 0; i < arr.length; i++) {
+                combs.push([arr[i]]);
+            };
+            return combs;
+        };
+
+        let combs = [];
+        for (let i = 0; i < arr.length - n + 1; i++) {
+            let current = arr.slice(i, i + 1);
+            let tailcombs = getCombinations(arr.slice(i + 1), n - 1);
+            for (let j = 0; j < tailcombs.length; j++) {
+                combs.push(current.concat(tailcombs[j]));
+            };
+        };
+        return combs;
+    };
+
+    console.log(getCombinations([1,2,3], 2));
+</script>
+</body>
+</html>
