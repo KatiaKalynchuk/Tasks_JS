@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task19</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function that returns array elements larger than a number.
+
+    let arr = [11, 45, 4, 31, 64, 10];
+
+    function getLargerElements(n) {
+        let arrLargerElements = [];
+        for (let i = 0; i <= arr.length; i++){
+            if (arr[i] > n){
+                arrLargerElements.push(arr[i])
+            }
+        };
+        return arrLargerElements;
+    };
+    console.log(getLargerElements(10));
+</script>
+</body>
+</html>
