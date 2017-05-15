@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task9</title>
+</head>
+<body>
+<script>
+    function getType(arg) {
+        if(typeof arg == 'undefined') {
+            return 'undefined';
+        } else if(arg == null) {
+            return 'null';
+        } else {
+            switch(arg.constructor) {
+                case  Object: 
+                    return 'Object';
+                    break;
+                case  Array: 
+                    return 'Array';
+                    break;
+                case  Function: 
+                    return 'Function';
+                    break;
+                case  Number: 
+                    return 'Number';
+                    break;
+                case  String: 
+                    return 'String';
+                    break;
+                case  Boolean: 
+                    return 'Boolean';
+                    break;
+                case  RegExp: 
+                    return 'RegExp';
+                    break;
+            }
+        }
+    };
+    console.log(getType(''));
+    console.log(getType(0));
+    console.log(getType(true));
+    console.log(getType({}));
+    console.log(getType(undefined));
+    console.log(getType(null));
+    console.log(getType(new RegExp()));
+</script>
+</body>
+</html>
