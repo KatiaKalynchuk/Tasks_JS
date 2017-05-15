@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to get the last element of an array.
+//    Passing a parameter 'n' will return the last 'n' elements of the array.
+
+    function getLastEl(arr,n) {
+        if (n){
+            return arr.slice(-n)
+        } else {
+            return arr[arr.length-1]
+        };
+    };
+console.log(getLastEl([7, 9, 0, -2]));
+console.log(getLastEl([7, 9, 0, -2],3));
+console.log(getLastEl([7, 9, 0, -2],6));
+
+</script>
+</body>
+</html>
