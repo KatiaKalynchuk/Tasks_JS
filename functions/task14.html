@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task14</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to convert an amount to coins.
+
+    function getCoins(n, coins) {
+        let arrCoins = [];
+        for (let i = 0; i <= coins.length; i++) {
+            if (n >= coins[i]) {
+                n = n - coins[i];
+                arrCoins.push(coins[i]);
+                i--;
+            }
+        }
+        return arrCoins;
+    };
+    console.log(getCoins(46,[25,10,5,2,1]));
+
+</script>
+</body>
+</html>
