@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 6</title>
+</head>
+<body>
+<script>
+//    Write a Bubble Sort algorithm in JavaScript.
+
+    Array.prototype.bubbleSort = function () {
+        for (let i = 0; i < this.length-1; i++){
+            for (let j = 0; j < this.length-i; j++){
+                if (this[j] < this[j-1]){
+                    let sorted = this[j];
+                    this[j] = this[j - 1];
+                    this[j - 1] = sorted;
+                };
+            };
+        };
+        return this;
+    };
+    console.log([6,4,0, 3,-2,1].bubbleSort());
+
+</script>
+</body>
+</html>
