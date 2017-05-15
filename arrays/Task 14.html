@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 14</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+function removeDuplicate(arr) {
+    let result = arr.join('').toLowerCase().split('').filter(filter);
+    function filter(item,i,arr) {
+        return arr.indexOf(item) === i;
+    };
+    return result;
+};
+console.log(removeDuplicate([1,1,3,4,5,3,6,4,5,1]));
+console.log(removeDuplicate(['a','A','a','b']));
+
+</script>
+</body>
+</html>
