@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_8</title>
+</head>
+<body>
+<script>
+    
+    let array = [0,1,2,3,4,5,6];
+    function binary_search(arr, n) {
+        // debugger;
+        let mid = Math.floor(arr.length/2);
+        if (arr[mid] === n){
+            return mid;
+        } else if (n > arr[mid]) {
+            let arr2 = arr.slice(mid, arr.length);
+            return mid + binary_search(arr2, n);
+        } else {
+            let arr3 = arr.slice(0, mid);
+            return binary_search(arr3, n);
+        }
+    };
+    console.log(binary_search(array, 3));
+    console.log(binary_search(array, 5));
+    console.log(binary_search(array, 1));
+
+
+</script>
+</body>
+</html>
