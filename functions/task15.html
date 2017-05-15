@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task15</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to compute the value of bn where n is the exponent
+//    and b is the bases.Accept b and n from the user and display the result.
+
+    let b = prompt("b?", 0);
+    let n = prompt("n?", 0);
+    
+    function pow(b,n) {
+        let result = b;
+        for (let i = 1; i < n; i++){
+            result *= b;
+        };
+        if (n === '0'){
+            return 1;
+        } else {
+            return result;
+        }
+    };
+    console.log(pow(b,n));
+</script>
+</body>
+</html>
