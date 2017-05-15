@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task3</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function that generates all combinations of a string.
+
+    function combinations(str) {
+        debugger;
+        var getComb = function(current, rest, arr) {
+            if (!current && !rest)
+                return;
+            if (!rest) {
+                arr.push(current);
+            } else {
+                getComb(current + rest[0], rest.slice(1), arr);
+                getComb(current, rest.slice(1), arr);
+            };
+            return arr;
+        };
+        return getComb('', str, []);
+    };
+    console.log(combinations('dog'));
+
+</script>
+</body>
+</html>
