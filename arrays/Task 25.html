@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 25</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to sort the following array of objects by title value.
+
+    let library = [
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+    ];
+
+    function sortArr(arr) {
+        return arr.sort(function (a,b) {
+            return a.title > b.title
+        });
+    };
+    console.log(sortArr(library));
+
+</script>
+</body>
+</html>
