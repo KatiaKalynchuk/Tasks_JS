@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task13</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to compute the factors of a positive integer.
+    
+    function getFactors(n) {
+        let arrFactors = [];
+        for (let i = 1; i <= n; i++){
+            if (n%i === 0){
+                arrFactors.push(i);
+            }
+        }
+        return arrFactors;
+    };
+    console.log(getFactors(6));
+    console.log(getFactors(5));
+    console.log(getFactors(27));
+    console.log(getFactors(15));
+    console.log(getFactors(275));
+</script>
+</body>
+</html>
