@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+<script>
+    function checkPalindrome(word) {
+        var str = word.toString();
+        strReverse = word.split('').reverse().join('');
+        if (strReverse === word) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    alert(checkPalindrome('sabas'));
+    alert(checkPalindrome('dsf'));
+</script>
+</body>
+</html>
