@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to find the most frequent item of an array.
+
+let array =[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+let count = 0;
+let maxOcc = 1;
+let result;
+
+function getFrequent(arr) {
+    for (let i = 0; i < arr.length; i++){
+        for (let j = i; j < arr.length; j++){
+            if (arr[i]==arr[j]){
+                count++;
+            };
+            if (maxOcc < count){
+                maxOcc = count;
+                result = arr[i];
+            };
+        };
+        count = 0;
+    };
+    return result;
+};
+console.log(getFrequent(array));
+
+</script>
+</body>
+</html>
