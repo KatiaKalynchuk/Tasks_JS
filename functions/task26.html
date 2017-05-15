@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task26</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript function to find longest substring in a given
+//    a string without repeating characters.
+
+    function getLongestSubstr(str) {
+        let result = '';
+        for(let i = 0; i < str.length; i++) {
+            if(result.indexOf(str[i]) == -1) {
+                result += str[i];
+            };
+        };
+        return result;
+    };
+
+    console.log(getLongestSubstr("javascript forever"));
+    
+</script>
+</body>
+</html>
