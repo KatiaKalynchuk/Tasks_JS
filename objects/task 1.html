@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 1</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to list the properties of a JavaScript object.
+
+let student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+
+function getListProp(obj) {
+    let listProp = '';
+    for (key in obj){
+        listProp += key+' ';
+    }
+    return listProp;
+};
+    console.log(getListProp(student));
+
+</script>
+</body>
+</html>
