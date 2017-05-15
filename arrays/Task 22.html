@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 22</title>
+</head>
+<body>
+<script>
+//    Write a JavaScript program to compute the union of two arrays.
+
+let union = [];
+
+function getUnion(arr1,arr2) {
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (union.indexOf(arr1[i]) === -1) {
+                union.push(arr1[i]);
+            };
+            if (union.indexOf(arr2[j]) === -1) {
+                union.push(arr2[j]);
+            };
+        };
+    };
+    return union;
+};
+
+console.log(getUnion([3,6,3,6,2],[23,11,2,2]));
+</script>
+</body>
+</html>
