@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task9</title>
+</head>
+<body>
+<script>
+    //    Write a JavaScript function to  get the number of
+    //    occurrences of each letter in specified string.
+
+    function getOccurrences(str) {
+debugger;
+        let result = {};
+        str.replace(/\S/g, function(index) {
+            let leters;
+            if(isNaN(result[index])) {
+                leters = 1;
+            } else {
+                leters = result[index] + 1;
+            }
+            result[index] = leters;
+        });
+        return result;
+    };
+
+    console.log(getOccurrences("The quick brown fox jumps over the lazy dog"));
+</script>
+</body>
+</html>
