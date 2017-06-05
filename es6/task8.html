@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    task8, Block scope, Constant non-constance
+
+    const account = {
+        username: "marijn",
+        password: "xyzzy"
+    }
+    Object.defineProperty(account, 'password', {
+        writable: false,
+        configurable: false,
+    })
+
+    account.password = "s3cret"; // (*much* more secure)
+
+    console.log(account.password)
+</script>
+</body>
+</html>
