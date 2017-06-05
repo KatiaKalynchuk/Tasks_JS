@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//task11_Arrow_functions_Sorted_array
+
+    class SortedArray{
+        constructor(compare){
+            this.compare = compare;
+            this.content = []
+        }
+
+        findPos(elt) {
+            for (let [index, value] of  this.content.entries()) {
+                if(this.compare(elt, value) < 0){
+                    return index;
+                }
+            }
+            return -1;
+        }
+
+        insert (elt) {
+            this.content.splice(this.findPos(elt), 0, elt)
+        }
+    }
+
+    let sorted = new SortedArray((a, b) => a - b )
+    sorted.insert(5)
+    sorted.insert(1)
+    sorted.insert(2)
+    sorted.insert(4)
+    sorted.insert(3)
+    console.log("array:", sorted.content)
+</script>
+</body>
+</html>
