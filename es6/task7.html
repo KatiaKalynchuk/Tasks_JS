@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    task7_Block_scope_Closing_over_scope
+
+    let callbacks = [];
+    for (let i = 0; i < 10; i++) {
+        callbacks.push(() => console.log(i))
+    }
+
+    callbacks[2]()
+</script>
+</body>
+</html>
