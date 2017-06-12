@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//task15_Destructuring.2: Default argument
+
+    function lastIndexOf(arr, elt, start = arr.length) {
+        for (let [index, value] of [...arr.entries()].reverse()){
+            if (value === elt) {return index}
+        }
+        return -1;
+    }
+
+    console.log(lastIndexOf([1, 2, 1, 2], 2))
+    }
+
+</script>
+</body>
+</html>
