@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// task22_Iterators.2: Take N
+
+/* The integers function creates an infinite iterator, that keeps on producing integers forever.
+
+   Implement the take function, which wraps an iterator in another iterator,
+   but cutting it off after n elements.
+*/
+
+    function integers() {
+        let i = 0;
+        return {next() { return {value: i++} },
+            [Symbol.iterator]() { return this }}
+    }
+
+    function take(n, iter) {
+        let integers = iter();
+        let i = 0;
+        let result = {
+            value: undefined,
+            done: true
+        };
+        return {
+            next() {
+                if(i < n) {
+                    result.value = integers.next().value;
+                    result.done = false;
+                    i++;
+                } else {
+                    result.done = true;
+                }
+                return result
+            },
+            [Symbol.iterator]() { return this }
+        }
+    }
+    let it = take(5,integers);
+
+    for (let elt of it) console.log(elt);
+
+</script>
+</body>
+</html>
