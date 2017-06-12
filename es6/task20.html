@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// task20_Symbols.2: Privacy
+
+/*Change the Queue class to use a symbol instead of an underscore-prefixed
+property name for the private content property.
+*/
+       let content = Symbol();
+       class Queue {
+            constructor() {
+                this[content] = content;
+                this[content] = [];
+            }
+            put(elt) {
+                return this[content].push(elt)
+            }
+            take() {
+                return this[content].shift()
+            }
+        }
+
+        let q = new Queue;
+        q.put(1);
+        q.put(2);
+        console.log(q.take());
+        console.log(q.take());
+
+
+    </script>
+</body>
+</html>
