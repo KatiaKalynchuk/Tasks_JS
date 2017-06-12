@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    task4_Object_literals_Fake_point
+
+/* Use a single object literal to create an object that is
+indistinguishable from a Point instance, without calling the Point constructor.
+*/
+
+    class Point {
+        constructor(x, y) {
+            this.x = x, this.y = y
+        }
+        add(other) {
+            return new Point(this.x + other.x, this.y + other.y)
+        }
+    }
+
+    let fakePoint = {
+        __proto__: Point.prototype,
+    };
+    console.log(fakePoint)
+</script>
+</body>
+</html>
