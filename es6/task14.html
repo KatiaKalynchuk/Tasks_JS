@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//task14_Destructuring_Avoiding_disaster
+
+    function go(options) {
+        let {
+            speed = 4,
+            enable: {x: hyperdrive = false, y: frobnifier = true} = {x: false, y: true}
+        } = options;
+        console.log("speed=", speed,
+                    "hyperdrive:", hyperdrive,
+                    "frobnifier:", frobnifier);
+    }
+    go({speed: 5})
+
+</script>
+</body>
+</html>
