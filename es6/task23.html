@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task23</title>
+</head>
+<body>
+<script>
+// task23_Generators.1: List generator
+
+/* Solve exercise Iterators.1 again, making the List class iterable by adding a [Symbol.iterator] method.
+But this time, use a generator function.
+
+ (Remember: the syntax for declaring a Symbol.iterator generator method in a class is *[Symbol.iterator]().)
+*/
+    class List {
+        constructor(head, tail) {
+            this.head = head
+            this.tail = tail
+        }
+
+        map(f) {
+            return new List(f(this.head), this.tail && this.tail.map(f))
+        }
+        *[Symbol.iterator]() {
+            let array = [];
+            this.map((item) => {
+                array.push(item);
+            })
+            yield* array;
+        }
+    }
+
+    let list = new List("x", new List("y", new List("z", null)))
+
+    for (let elt of list) console.log(elt)
+    // → x
+    //   y
+    //   z
+</script>
+</body>
+</html>
