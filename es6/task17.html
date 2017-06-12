@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//   task17_Template strings.1: The tooling team
+
+    const teamName = "tooling"
+    const people = [{name: "Jennie", role: "senior"},
+        {name: "Ronald", role: "junior"},
+        {name: "Martin", role: "senior"},
+        {name: "Anneli", role: "junior"}];
+    let senior = people.filter(el => el.role == 'senior')
+
+    let message = `There are ${people.length} people on the ${teamName} team.
+                   Their names are ${people[0].name}, ${people[1].name},
+                   ${people[2].name}, ${people[3].name}.
+                   ${senior.length} of them have a senior role.`
+
+    console.log(message)
+</script>
+</body>
+</html>
