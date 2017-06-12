@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task24</title>
+</head>
+<body>
+<script>
+// task24_Generators.2: Take N again
+
+// Redo exercise Iterators.2 using a generator.
+
+    function* integers() {
+        for (let i = 0;; i++) yield i
+    }
+
+    function* take(n, iter) {
+        while(n--) {
+            yield iter.next().value;
+        }
+    }
+
+    for (let elt of take(3, integers()))
+        console.log(elt)
+</script>
+</body>
+</html>
