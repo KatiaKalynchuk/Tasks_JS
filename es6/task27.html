@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+/* task27_Generators.3: Async generators
+
+ In exercise Promises.1, we wrote a simple web crawler using promises
+ (get the content of http://marijnhaverbeke.nl, fetch the content of all local links, search for the word
+ “Piranha”). Do this again, using the drive function from the slides and a generator function. Don't worry
+  about making the requests in parallel this time.*/
+
+        drive(function*() {
+            let arr = [];
+            let data;
+            yield get('http://marijnhaverbeke.nl').then((text) => {
+            data = text;
+            })
+            
+            const links = data.match(/([a-z0-9_\.-]+)html/gi);
+            
+            for (let link of links){
+            let url = `http://marijnhaverbeke.nl/${link}`;
+            yield get(url).then(data=>{
+                const text = data.search(/Piranha/gi);
+                if(text != -1) {
+                arr.push(url);
+                }
+            })
+            }
+            console.log(arr)
+        })
+
+        function drive(generator) {
+            let iterator = generator()
+            function resume(result) {
+                if (result.done) return
+                result.value.then(
+                value => resume(iterator.next(value)),
+                error => resume(iterator.throw(error)))
+            }
+            resume(iterator.next())
+        }
+
+        function get(url) {
+            return new Promise((succeed, fail) => {
+                let req = new XMLHttpRequest()
+                req.open("GET", url, true)
+                req.addEventListener("load", () => {
+                    if (req.status < 400)
+                        succeed(req.responseText)
+                    else
+                        fail(new Error("Request failed: " + req.statusText))
+                })
+                req.addEventListener("error", () => {
+                    fail(new Error("Network error"))
+                })
+                req.send(null)
+            })
+        }
+
+    </script>
+    
+</body>
+</html>
